@@ -1,0 +1,9 @@
+C:\Users\stefa\Documents\A A C_Compiler_CSharp_8_Assembly\C_Compiler_CSharp_8_Assembly\bin\Debug\C_Compiler_CSharp_8_Assembly.exe.config
+C:\Users\stefa\Documents\A A C_Compiler_CSharp_8_Assembly\C_Compiler_CSharp_8_Assembly\bin\Debug\C_Compiler_CSharp_8_Assembly.exe
+C:\Users\stefa\Documents\A A C_Compiler_CSharp_8_Assembly\C_Compiler_CSharp_8_Assembly\bin\Debug\C_Compiler_CSharp_8_Assembly.pdb
+C:\Users\stefa\Documents\A A C_Compiler_CSharp_8_Assembly\C_Compiler_CSharp_8_Assembly\bin\Debug\QUT.ShiftReduceParser.dll
+C:\Users\stefa\Documents\A A C_Compiler_CSharp_8_Assembly\C_Compiler_CSharp_8_Assembly\obj\Debug\C_Compiler_CSharp_8_Assembly.csproj.AssemblyReference.cache
+C:\Users\stefa\Documents\A A C_Compiler_CSharp_8_Assembly\C_Compiler_CSharp_8_Assembly\obj\Debug\C_Compiler_CSharp_8_Assembly.csproj.CoreCompileInputs.cache
+C:\Users\stefa\Documents\A A C_Compiler_CSharp_8_Assembly\C_Compiler_CSharp_8_Assembly\obj\Debug\C_Compiler_CSharp_8_Assembly.csproj.CopyComplete
+C:\Users\stefa\Documents\A A C_Compiler_CSharp_8_Assembly\C_Compiler_CSharp_8_Assembly\obj\Debug\C_Compiler_CSharp_8_Assembly.exe
+C:\Users\stefa\Documents\A A C_Compiler_CSharp_8_Assembly\C_Compiler_CSharp_8_Assembly\obj\Debug\C_Compiler_CSharp_8_Assembly.pdb
