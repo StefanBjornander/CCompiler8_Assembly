@@ -237,6 +237,39 @@ namespace CCompiler {
       }
     }
   
+    /*public static IDictionary<MiddleOperator, MiddleOperator> m_swapMap =
+       new Dictionary<MiddleOperator, MiddleOperator>() {
+        {MiddleOperator.Equal, MiddleOperator.Equal},
+        {MiddleOperator.NotEqual, MiddleOperator.NotEqual},
+        {MiddleOperator.SignedLessThan, MiddleOperator.SignedGreaterThan},
+        {MiddleOperator.SignedGreaterThan, MiddleOperator.SignedLessThan},
+        {MiddleOperator.SignedLessThanEqual, MiddleOperator.SignedGreaterThanEqual},
+        {MiddleOperator.SignedGreaterThanEqual, MiddleOperator.SignedLessThanEqual},
+        {MiddleOperator.UnsignedLessThan, MiddleOperator.UnsignedGreaterThan},
+        {MiddleOperator.UnsignedGreaterThan, MiddleOperator.UnsignedLessThan},
+        {MiddleOperator.UnsignedLessThanEqual, MiddleOperator.UnsignedGreaterThanEqual},
+        {MiddleOperator.UnsignedGreaterThanEqual, MiddleOperator.UnsignedLessThanEqual},
+      };
+
+    // if 1 < x goto
+    // if x > 1 goto
+    private void OptimizeRelation() {
+      foreach (MiddleCode middleCode in m_middleCodeList) {
+        if (middleCode.IsRelation()) {
+          Symbol leftSymbol = (Symbol)middleCode[1],
+                 rightSymbol = (Symbol)middleCode[2];
+          if ((leftSymbol.Value is BigInteger) ||
+              (leftSymbol.Type.IsArrayFunctionOrString()) &&
+              !rightSymbol.Type.IsArrayFunctionOrString() &&
+              !(rightSymbol.Value is BigInteger)) {
+            middleCode.Operator = m_swapMap[middleCode.Operator];
+            middleCode[1] = rightSymbol;
+            middleCode[2] = leftSymbol;
+          }
+        }
+      }
+    }*/
+
     // Push x + Pop => empty
     public void RemovePushPop() {
       for (int index = 0; index < (m_middleCodeList.Count - 1); ++index) {
