@@ -34,7 +34,7 @@ namespace CCompiler {
         TraceGotoChains();
         ClearUnreachableCode();
         RemovePushPop();
-        //MergePopPushToTop();
+        MergePopPushToTop();
         MergeTopPopToPop();
         MergeBinary();
         //MergeDoubleAssign();
@@ -285,9 +285,34 @@ namespace CCompiler {
         }
       }
     }
+
+    public void MergePopPushToTop() {
+      ISet<int> targetIndexSet = new HashSet<int>();
+
+      foreach (MiddleCode middleCode in m_middleCodeList) {
+        if (middleCode.IsRelationCarryOrGoto()) {
+          targetIndexSet.Add((int) middleCode.GetOperand(0));
+        }
+      }
+
+      for (int index = 0; index < (m_middleCodeList.Count - 1); ++index) {
+        if (!targetIndexSet.Contains(index + 1)) {
+          MiddleCode thisCode = m_middleCodeList[index],
+                      nextCode = m_middleCodeList[index + 1];
+
+          if ((thisCode.Operator == MiddleOperator.PopFloat) &&
+              (nextCode.Operator == MiddleOperator.PushFloat) &&
+              (thisCode.GetOperand(0) == nextCode.GetOperand(0))) {
+            thisCode.Operator = MiddleOperator.TopFloat;
+            nextCode.Clear();
+            m_update = true;
+          }
+        }
+      }
+    }
   
     // Pop x + Push x => Top x
-    public void MergePopPushToTop() {
+    public void MergePopPushToTopX() {
       for (int index = 0; index < (m_middleCodeList.Count - 1); ++index) {
         MiddleCode thisCode = m_middleCodeList[index],
                    nextCode = m_middleCodeList[index + 1];
